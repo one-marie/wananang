@@ -1,11 +1,9 @@
-//index.php   
-
+   
  <?php
-include 'db.php';  // Include the database connection
+include 'db.php';
 
-$sql = "SELECT * FROM tasks ORDER BY created_at DESC";  // Query to get tasks ordered by creation time
-$result = $conn->query($sql);  // Execute the query
-
+$sql = "SELECT * FROM tasks ORDER BY created_at DESC";  
+$result = $conn->query($sql); 
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,7 +26,6 @@ while ($task = $result->fetch_assoc()):
 <td><a href="edit_task.php?id=<?php echo $task['id']; ?>">Edit</a>
       |
 <a href="delete_task.php?id=<?php echo $task['id']; ?>">Delete</a></td>
-        
         </tr>
         </table>
     </div>
