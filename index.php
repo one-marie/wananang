@@ -19,7 +19,7 @@ $result = $conn->query($sql);
 <?php 
 while ($task = $result->fetch_assoc()): 
 ?>
-    <div>
+   <div>
       <table><tr>Task Name
         <td><?php echo $task['taskname'];?> 
         </td>
